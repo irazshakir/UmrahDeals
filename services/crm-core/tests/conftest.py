@@ -1,0 +1,1 @@
+# conftest.py: shared fixtures (e.g., test DB session, fake JWT).
