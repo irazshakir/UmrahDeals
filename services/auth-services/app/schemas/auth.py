@@ -7,4 +7,7 @@ class LoginRequest(BaseModel):
 class TokenResponse(BaseModel):
     access_token: str
     refresh_token: str
-    token_type: str = "bearer"
+    token_type: str
+    role: str
+    tenant_id: str
+    name: str
