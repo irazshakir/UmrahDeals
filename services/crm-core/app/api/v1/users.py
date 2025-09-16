@@ -1,7 +1,8 @@
 # v1/: versioning your APIs (important for backward compatibility).
 
-# leads.py → endpoints for leads (GET /leads, POST /leads)
+from fastapi import APIRouter
+from app.services.users.routes import router as users_router
 
-# contacts.py → endpoints for contacts
-
-# activities.py → endpoints for activities
+# API entrypoint for users under /api/v1
+router = APIRouter()
+router.include_router(users_router)
